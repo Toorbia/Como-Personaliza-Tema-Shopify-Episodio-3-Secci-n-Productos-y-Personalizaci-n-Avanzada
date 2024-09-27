@@ -1,0 +1,70 @@
+codigos:
+
+announcement-bar.liquid
+
+ <div class="localization-wrapper">
+     <a href="{{ routes.account_url }}" class="bar-link">Sign in </a>
+     <a href="{{ routes.account_register_url }}" class="bar-link">Sign Up </a>
+ </div>
+
+
+base.css
+
+.bar-link{
+    text-align: center;
+    padding-right: 1.2rem;
+    text-decoration: none;
+    font-size: calc(var(--font-heading-scale) * 1.3rem);
+    color: rgb(var(--color-foreground));
+  }
+
+@media screen and (max-width: 989px) {
+  .bar-link {
+    display: none;
+  }
+}
+
+
+
+personalizar css
+
+.utility-bar--bottom-border{
+border-bottom: .1rem solid rgba(var(--color-foreground),.5);
+}
+
+
+@media screen and (min-width: 990px) {
+  body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+
+
+
+
+
+.header__active-menu-item {
+  transition: text-decoration-thickness var(--duration-short) ease;
+  color: rgb(var(--color-foreground));
+  /*text-decoration: underline;*/
+  text-underline-offset: 0.3rem;
+}
+
+
+.header__menu-item:hover span {
+  /*text-decoration: underline;
+  text-underline-offset: 0.3rem;*/
+}
+
+
+
+@media screen and (min-width: 990px) {
+    .header--middle-left {
+        grid-template-areas: "heading navigation icons";
+        /* grid-template-columns: auto auto 1fr; */
+        column-gap: 2rem;
+    }
+}
+
+

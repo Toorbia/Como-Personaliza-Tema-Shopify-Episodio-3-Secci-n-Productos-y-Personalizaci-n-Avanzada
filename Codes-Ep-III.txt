@@ -1,0 +1,82 @@
+settings_schema.json
+
+{
+       "type": "color",
+       "id": "colores_1",
+       "label": "t:settings_schema.colors.settings.colores_1.label",
+       "default": "#FFFFFF"
+  },
+{
+       "type": "color",
+       "id": "colores_2",
+       "label": "t:settings_schema.colors.settings.colores_2.label",
+       "default": "#FFFFFF"
+  },
+{
+       "type": "color",
+       "id": "colores_3",
+       "label": "t:settings_schema.colors.settings.colores_3.label",
+       "default": "#FFFFFF"
+  },
+{
+       "type": "color",
+       "id": "colores_4",
+       "label": "t:settings_schema.colors.settings.colores_4.label",
+       "default": "#FFFFFF"
+  },
+{
+       "type": "color",
+       "id": "colores_5",
+       "label": "t:settings_schema.colors.settings.colores_5.label",
+       "default": "#FFFFFF"
+  }
+
+
+
+
+es.schema.json
+
+
+"colores_1": {
+          "label": "Color 1"
+        },
+        "colores_2": {
+          "label": "Color 2"
+        },
+        "colores_3": {
+          "label": "Color 3"
+        },
+        "colores_4": {
+          "label": "Color 4"
+        },
+        "colores_5": {
+          "label": "Color 5"
+        }
+
+
+
+Base.css
+
+
+.full-unstyled-link {
+    text-decoration: none !important;
+    color: currentColor;
+    display: block;
+}
+
+
+
+card-product.liquid
+
+ {%- assign mc = card_product.compare_at_price -%}
+ {%- assign mo = card_product.price -%}   	 
+ {%- assign percent = mc | minus: mo | times: 100.0 | divided_by: mc | round | append: '%' -%}
+
+
+para mostrar:
+
+{{ percent }}
+
+
+
+
